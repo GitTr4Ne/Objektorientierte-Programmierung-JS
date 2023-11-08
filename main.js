@@ -1,31 +1,50 @@
-//importierte Klassen 
+/* var divEle = document.createElement("div")
+divEle.innerText = "Hello World 2";
+document.body.appendChild(divEle);
 
-import {Car, Ship} from "./car.js";
-import {Student} from "./student.js";
+var link = document.createElement("a");
+link.innerText = "Click here";
+link.href = "https://www.google.de"
+document.body.appendChild(link); */
 
-var student = new Student("Gracjan", 1, 1.5);
-var student2 = new Student("Max", 2, 2);
-var student3 = new Student("Peter", 3, 2.5);
+var table = document.getElementById("table");
+var row = table.insertRow(1);
+row.insertCell(0).innerText = "Gracjan";
+row.insertCell(1).innerText = "Kilanczyk";
 
-var car = new Car("VW", 1994, 132);
-var car2 = new Car("Porsche", 2020, 231);
+var row = table.insertRow(2);
+row.insertCell(0).innerText = "Adolf";
+row.insertCell(1).innerText = "Hitler";
 
-var ship = new Ship("Tanker", 1990, 2500)
+var btn = document.getElementById("test");
+btn.addEventListener("click", function(){
+    var row = table.insertRow(1);
+    row.insertCell(0).innerText = "Froni";
+    row.insertCell(1).innerText = "Ziegltrum";
+});
 
-function main()
-{
-car.drive();
-car.honk();
+function main(){
 
-car2.drive();
-car2.honk();
-
-ship.drive();
-ship.honk();
-
-console.log(student,student2,student3)
-
+table.classList.add("dieTabelle");
 
 }
 
-main();
+function remove(){
+
+    table.classList.remove("dieTabelle");
+    
+}    
+
+function toggle(){
+
+    table.classList.toggle("dieTabelle");
+    
+};
+
+table.addEventListener("mouseover", function(){
+    table.classList.add("highlight");
+});
+
+table.addEventListener("mouseout", function(){
+    table.classList.remove("highlight");
+});
