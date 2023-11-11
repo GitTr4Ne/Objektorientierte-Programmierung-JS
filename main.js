@@ -1,21 +1,20 @@
-// Promises
+// Timeout & Interval
 
 function main(){
 
-let promise = new Promise((resolve, reject) => {
+console.log(1)
 
-    let n = 99;
+setTimeout(() => {
+console.log("Zeige nach 3 Sekunden")
+}, 3000);
 
-    if(n < 100) {
-        resolve("Versprechen gehalten")
-    } else {
-        reject("versprechen nicht gehalten")
-    }
-})
+console.log(2)
 
-    promise.then((res) => {
-        console.log(res)
-    }).catch((e) => {
-        console.log("Error: "+ e)
-    })
+
+var ticker = 0;
+
+setInterval(() => {
+    ticker++;
+    console.log(ticker)
+}, 1000)
 }
