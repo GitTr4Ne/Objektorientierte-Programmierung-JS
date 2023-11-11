@@ -1,20 +1,17 @@
-// Timeout & Interval
+// array fulter() & map()
 
 function main(){
 
-console.log(1)
+    // filter
+let numbers = [1,5,3,29,83,10,8,4]
 
-setTimeout(() => {
-console.log("Zeige nach 3 Sekunden")
-}, 3000);
+let smallNumbers = numbers.filter(n =>{
+    return n < 10
+});
 
-console.log(2)
+console.log(smallNumbers)
 
-
-var ticker = 0;
-
-setInterval(() => {
-    ticker++;
-    console.log(ticker)
-}, 1000)
+// map()
+let doubledNumbers = numbers.map(n => n* 2);
+console.log(doubledNumbers)
 }
