@@ -3,6 +3,36 @@
         <div style="margin-bottom: 10px;">
             <button onclick="main()">Überprüfen</button>
         </div>
+        <div style="margin-bottom: 10px;">
+            <button onclick="remove()">zurück</button>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <button onclick="toggle()">Toggle</button>
+        </div>
+        <div>
+            <table id="table">
+                <tr>
+                    <th>Vorname</th>
+                    <th>Nachname</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    <button id="test">Test</button>
 
     <script src="main.js" type="text/javascript">    </script>
 </html>
+
+<style>
+    .dieTabelle{
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid gray;
+    }
+
+    .highlight{
+        zoom: 120%;
+    }
+</style>
