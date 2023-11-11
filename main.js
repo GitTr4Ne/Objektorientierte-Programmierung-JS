@@ -1,50 +1,29 @@
-/* var divEle = document.createElement("div")
-divEle.innerText = "Hello World 2";
-document.body.appendChild(divEle);
-
-var link = document.createElement("a");
-link.innerText = "Click here";
-link.href = "https://www.google.de"
-document.body.appendChild(link); */
-
-var table = document.getElementById("table");
-var row = table.insertRow(1);
-row.insertCell(0).innerText = "Gracjan";
-row.insertCell(1).innerText = "Kilanczyk";
-
-var row = table.insertRow(2);
-row.insertCell(0).innerText = "Emma";
-row.insertCell(1).innerText = "Ziegltrum";
-
-var btn = document.getElementById("test");
-btn.addEventListener("click", function(){
-    var row = table.insertRow(1);
-    row.insertCell(0).innerText = "Froni";
-    row.insertCell(1).innerText = "Ziegltrum";
-});
+// Try Catch
 
 function main(){
 
-table.classList.add("dieTabelle");
+try {
+
+    var n = 600;
+
+    if (n > 0 && n < 1000){
+        console.log("Die nummer ist zwischen 0 und 1000")
+    } else {
+        throw new RangeError("die Nummer ist zu groß oder zu klein")
+    }
+    console.log(age)
+} catch(e){
+    console.log("Error abgefangen: " + e)
+
+    if(e instanceof ReferenceError)
+    console.log("Referenz fehler")
+
+}finally
+{
+    //wird in jedem fall ausgeführt
+    console.log("Ich mag kuchen")
+}
+    console.log(10/0)
+    console.log("Hello World")
 
 }
-
-function remove(){
-
-    table.classList.remove("dieTabelle");
-    
-}    
-
-function toggle(){
-
-    table.classList.toggle("dieTabelle");
-    
-};
-
-table.addEventListener("mouseover", function(){
-    table.classList.add("highlight");
-});
-
-table.addEventListener("mouseout", function(){
-    table.classList.remove("highlight");
-});
